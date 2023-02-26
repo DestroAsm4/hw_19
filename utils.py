@@ -40,5 +40,5 @@ def admin_require(func):
         except Exception as e:
             print('JWT Decode exception', e)
             abort(401)
-            return func(*args, **kwargs)
+        return func(*args, **kwargs)
     return wrapper
